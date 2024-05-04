@@ -1,8 +1,7 @@
+import { Name } from "./Person.types";
+
 type SaxList = {
-  names: {
-    fname: string;
-    lname: string;
-  }[];
+  names: Name[]
 };
 export const PersonList = (props: SaxList) => {
   return <div>{props.names.map(name => {
