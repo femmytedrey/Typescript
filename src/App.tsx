@@ -1,5 +1,6 @@
 import "./App.css";
 import { Button } from "./components/Button";
+import { Counter } from "./components/Counter";
 import { Greet } from "./components/Greet";
 import { Heading } from "./components/Heading";
 import { Input } from "./components/Input";
@@ -8,7 +9,8 @@ import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
-import { Style } from "./components/Style";
+import { User } from "./components/User";
+// import { Style } from "./components/Style";
 // import { TestingBtn } from "./components/TestingBtn";
 
 function App() {
@@ -48,16 +50,18 @@ function App() {
         names={nameList}
       />
       <Input value="" handleChange={(event) => console.log(event)} />
-      <Style
+      {/* <Style
         style={{
           background: "green",
           padding: "10px 10px",
           color: "white",
           fontSize: "1rem",
         }}
-      />
-      <LoggedIn />
+      /> */}
+      {/* <LoggedIn /> */}
       {/* <TestingBtn label='JustForTesting' handleClick={(event) => console.log('This btn is for testing', event)}/> */}
+      <User />
+      <Counter />
     </div>
   );
 }
