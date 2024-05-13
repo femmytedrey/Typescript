@@ -4,12 +4,18 @@ import { Counter } from "./components/Counter";
 import { Greet } from "./components/Greet";
 import { Heading } from "./components/Heading";
 import { Input } from "./components/Input";
-import { LoggedIn } from "./components/LoggedIn";
+// import { LoggedIn } from "./components/LoggedIn";
 import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
-import { User } from "./components/User";
+// import { User } from "./components/User";
+import { User } from "./components/context/User"
+import { Box } from "./components/context/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { UserContextProvider } from "./components/context/UserContext";
+import { DomRef } from "./components/ref/DomRef";
+import { MutableRef } from "./components/ref/MutableRef";
 // import { Style } from "./components/Style";
 // import { TestingBtn } from "./components/TestingBtn";
 
@@ -60,8 +66,17 @@ function App() {
       /> */}
       {/* <LoggedIn /> */}
       {/* <TestingBtn label='JustForTesting' handleClick={(event) => console.log('This btn is for testing', event)}/> */}
-      <User />
+      {/* <User /> */}
       <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
+      <DomRef />
+      <MutableRef />
     </div>
   );
 }
