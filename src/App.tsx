@@ -16,6 +16,8 @@ import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { UserContextProvider } from "./components/context/UserContext";
 import { DomRef } from "./components/ref/DomRef";
 import { MutableRef } from "./components/ref/MutableRef";
+import { Private } from "./components/auth/Private";
+import { Profile } from "./components/auth/Profile";
 // import { Style } from "./components/Style";
 // import { TestingBtn } from "./components/TestingBtn";
 
@@ -67,16 +69,17 @@ function App() {
       {/* <LoggedIn /> */}
       {/* <TestingBtn label='JustForTesting' handleClick={(event) => console.log('This btn is for testing', event)}/> */}
       {/* <User /> */}
-      <Counter />
+      {/* <Counter />
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
 
       <UserContextProvider>
         <User />
-      </UserContextProvider>
+      </UserContextProvider> */}
       <DomRef />
-      <MutableRef />
+      {/* <MutableRef /> */}
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
