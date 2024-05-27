@@ -18,6 +18,8 @@ import { DomRef } from "./components/ref/DomRef";
 import { MutableRef } from "./components/ref/MutableRef";
 import { Private } from "./components/auth/Private";
 import { Profile } from "./components/auth/Profile";
+import { ListItem } from "./components/List";
+import { RandomNumber } from "./components/RandomNumber";
 // import { Style } from "./components/Style";
 // import { TestingBtn } from "./components/TestingBtn";
 
@@ -80,6 +82,8 @@ function App() {
       <DomRef />
       {/* <MutableRef /> */}
       <Private isLoggedIn={true} component={Profile} />
+      <ListItem items={[1, 2, 3, 4, 5, 6, 7]} onClick={(item) => console.log(item)} />
+      <RandomNumber value={10} isPositive={true} />
     </div>
   );
 }
