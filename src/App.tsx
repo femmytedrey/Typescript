@@ -10,7 +10,7 @@ import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 // import { User } from "./components/User";
-import { User } from "./components/context/User"
+import { User } from "./components/context/User";
 import { Box } from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { UserContextProvider } from "./components/context/UserContext";
@@ -20,6 +20,10 @@ import { Private } from "./components/auth/Private";
 import { Profile } from "./components/auth/Profile";
 import { ListItem } from "./components/List";
 import { RandomNumber } from "./components/RandomNumber";
+import { Toast } from "./components/Toast";
+import { CustomButton } from "./components/html/Button";
+import { CustomInput } from "./components/html/Input";
+import { CustomComponent } from "./components/CustomComponent";
 // import { Style } from "./components/Style";
 // import { TestingBtn } from "./components/TestingBtn";
 
@@ -82,8 +86,16 @@ function App() {
       <DomRef />
       {/* <MutableRef /> */}
       <Private isLoggedIn={true} component={Profile} />
-      <ListItem items={[1, 2, 3, 4, 5, 6, 7]} onClick={(item) => console.log(item)} />
+      <ListItem
+        items={[1, 2, 3, 4, 5, 6, 7]}
+        onClick={(item) => console.log(item)}
+      />
       <RandomNumber value={10} isPositive={true} />
+      <Toast position="center" />
+      <CustomInput />
+      <CustomButton variant="primary" onClick={() => console.log('Clicked')}>Primary ButtonZ</CustomButton>
+      <CustomComponent name="Nathaniel" isLoggedIn={true}/>
+
     </div>
   );
 }

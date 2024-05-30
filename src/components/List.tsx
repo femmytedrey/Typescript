@@ -10,9 +10,9 @@ export const ListItem = <T extends ReactNode>({ items, onClick }: ListProps<T>) 
       <h2>List of Items</h2>
       {items.map((item, index) => {
         return (
-          <div key={index} onClick={() => onClick(item)}>
-            {item}
-          </div>
+          <span key={index} onClick={() => onClick(item)}>
+            {item}, 
+          </span>
         );
       })}
     </div>
